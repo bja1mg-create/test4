@@ -1,0 +1,13 @@
+name: Hallo Test
+on:
+  workflow_dispatch:
+jobs:
+  sag-hallo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python hallo.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: meine-popup-seite
+          path: index.html
